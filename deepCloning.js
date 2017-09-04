@@ -29,9 +29,9 @@ function deepCloning(obj){
     for (var prop in obj){
         var innerObject = {};
         var cloneObjectProperty = obj[prop];
-        if (typeof(cloneObjectProperty) == "object"){
-            for (var prop2 in cloneObjectProperty){
-                innerObject[prop2] = cloneObjectProperty[prop2];
+        if (typeof cloneObjectProperty === "object"){
+            for (var key in cloneObjectProperty){
+                innerObject[key] = cloneObjectProperty[key];
             }
         }
         else{
@@ -43,3 +43,8 @@ function deepCloning(obj){
 }
 
 deepCloning(dog);
+
+
+
+
+
